@@ -13,13 +13,6 @@ function Shop() {
         }
     }, [scrollPosition]);
 
-    const handleScroll = () => {
-        const container = document.querySelector('.scroll-container');
-        if (container) {
-            setScrollPosition(container.scrollLeft);
-        }
-    };
-
     const scrollLeft = () => {
         const container = document.querySelector('.scroll-container');
         if (container && scrollPosition > 0) {
@@ -48,7 +41,7 @@ function Shop() {
                     <h2 className='font-semibold text-[30px]'>Shop Groceries</h2>
                     <a className='underline' href="">View all</a>
                 </div>
-                <div onScroll={handleScroll} className='flex overflow-auto scroll-container scrollbar-thin scroll-smooth'>
+                <div className='flex overflow-auto scroll-container scrollbar-thin scroll-smooth'>
                     {categoriesData}
                 </div>
             </main>
