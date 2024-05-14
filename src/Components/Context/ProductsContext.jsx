@@ -35,7 +35,6 @@ export const ProductsProvider = ({ children }) => {
     } else {
         setCart([...cart, { ...product, qty: 1 }]);
     }
-    
   };
 
   const removeFromCart = (productId) => {
