@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { ProductsContext } from '../Context/ProductsContext';
 
 function ProductCard(props) {
     const productData = props.product;
     const [randomNumber, setRandomNumber] = useState(0);
+    const {addToCart} = useContext(ProductsContext)
     useEffect(() => {
         setRandomNumber((Math.random() + 4).toFixed(1));
     }, [])
@@ -21,7 +23,7 @@ function ProductCard(props) {
                 {(productData.price)%100}
             </span>       
         </div>
-        <a className='w-[85%] align-text-center text-white h-[30px] bg-[#0C893D] rounded-[6px]' href="">+Cart</a>
+        <button className='w-[85%] align-text-center text-white h-[30px] bg-[#0C893D] rounded-[6px]' onClick={() => addToCart(productData)}>+ Cart</button>
     </section>
   )
 }
