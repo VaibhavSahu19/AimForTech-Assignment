@@ -15,15 +15,15 @@ function App() {
     <div className=''>
       <Routes>
         <Route path="/" element={
-          <div className='flex'>
-            <div className='flex-1 max-w-[80%]'>
+          <div className='flex md:justify-start md:items-start'>
+            <div className='flex-1 w-[100%] md:max-w-[80%]'>
               <Header />
               <Hero />
               <Shop />
               <ProductList />
               <Footer />
             </div>
-            <div className='shadow-lg'>
+            <div className='shadow-lg hidden md:block'>
               {!viewCart && <SideCart />}
             </div>
           </div>

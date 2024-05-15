@@ -8,7 +8,7 @@ const App = () => {
   const items = [<Component1 />, <Component2 />, <Component3 />];
 
   return (
-    <div className='mt-[100px] px-[40px]'>
+    <div className='mt-[100px] md:md-[0px] px-[10px] md:px-[40px]'>
       <Carousel items={items} />
     </div>
   );

@@ -26,7 +26,7 @@ function SideCart() {
   }, [cart]);
 
   return (
-    <main className='flex flex-col px-[20px] py-[10px] fixed'>
+    <main className='flex mt-[70px] flex-col px-[20px] py-[10px] fixed'>
       <div className='flex justify-between text-md py-[10px] border-b-[2px]'>
         <h2 className='font-bold'>Your cart</h2>
         <Link className='underline' to='/cart'>View Cart</Link>

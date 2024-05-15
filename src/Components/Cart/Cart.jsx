@@ -4,7 +4,7 @@ import SideCart from './SideCart'
 
 function Cart() {
   return (
-    <div>
+    <div className=''>
       <Header />
       <SideCart />
     </div>
