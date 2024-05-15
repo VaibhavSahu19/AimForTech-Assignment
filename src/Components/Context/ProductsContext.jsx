@@ -5,7 +5,7 @@ export const ProductsContext = createContext();
 export const ProductsProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
-  const [productFound, setProductFound] = useState(false);
+  const [viewCart, setViewCart] = useState(false);
 
   async function fetchData() {
     try {
@@ -37,6 +37,15 @@ export const ProductsProvider = ({ children }) => {
     }
   };
 
+  const reduceQuantity = (product) => {
+    const existingProductIndex = cart.findIndex(item => item.id === product.id);
+    if(existingProductIndex !== -1 && cart[existingProductIndex].qty > 0){
+      const updatedCart = [...cart];
+      updatedCart[existingProductIndex].qty -= 1;
+      setCart(updatedCart);
+    }
+  }
+
   const removeFromCart = (productId) => {
     const updatedCart = cart.filter(item => item.id !== productId);
     setCart(updatedCart);
@@ -50,9 +59,11 @@ export const ProductsProvider = ({ children }) => {
     <ProductsContext.Provider
       value={{
         products,
+        viewCart,
         cart,
         addToCart,
         removeFromCart,
+        reduceQuantity,
         clearCart
       }}
     >
