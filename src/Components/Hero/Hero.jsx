@@ -10,7 +10,7 @@ function Hero() {
         foodImage3
     ]
   return (
-    <div>
+    <div className='flex-1 mt-[100px]'>
         hjkdashfkjas
     </div>
   )

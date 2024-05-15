@@ -1,8 +1,13 @@
 import React from 'react'
+import Header from '../Header/Header'
+import SideCart from './SideCart'
 
 function Cart() {
   return (
-    <div>Cart</div>
+    <div>
+      <Header />
+      <SideCart />
+    </div>
   )
 }
 

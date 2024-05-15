@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <section className='flex bg-[#F2F4F3] flex-col justify-center gap-[30px] py-[30px] px-[60px]'>
+    <section className='flex bg-[#F2F4F3] flex-col justify-center gap-[30px] py-[30px] px-[60px] shadow-md'>
         <a href='/' className='flex self-center justify-center items-center gap-[5px]'>Back to Top <img src="/Footer/arrow-up.svg" alt="" /></a>
         <div className='flex flex-wrap justify-between'>
             <div className='flex gap-[10px] flex-col'>
