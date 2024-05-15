@@ -1,19 +1,17 @@
-import React from 'react'
-import foodImage1 from "../../Images/Carousel/foodImage1.jpg";
-import foodImage2 from "../../Images/Carousel/foodImage2.jpg";
-import foodImage3 from "../../Images/Carousel/foodImage3.jpg";
+import React from 'react';
+import Carousel from './Carousel/Carousel';
+import Component1 from './Component1';
+import Component2 from './Component2';
+import Component3 from './Component3';
 
-function Hero() {
-    const slides = [
-        foodImage1,
-        foodImage2,
-        foodImage3
-    ]
+const App = () => {
+  const items = [<Component1 />, <Component2 />, <Component3 />];
+
   return (
-    <div className='flex-1 mt-[100px]'>
-        hjkdashfkjas
+    <div className='mt-[100px] px-[40px]'>
+      <Carousel items={items} />
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default App;
