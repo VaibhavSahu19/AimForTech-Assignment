@@ -6,8 +6,8 @@ function ProductInCart(props) {
     const {cart, addToCart, reduceQuantity, removeFromCart} = useContext(ProductsContext);
 
   return (
-    <section className='flex px-[10px] gap-[10px] m-[5px]'>
-        <div className='w-[80px]'>
+    <section className='flex justify-center items-center px-[10px] gap-[10px] m-[5px]'>
+        <div className='w-[200px]'>
             <img className='w-[100%]' src={productData.img} alt={`${productData.name} Image`} />
         </div>
         <div className='flex flex-col gap-[10px]'>
@@ -32,4 +32,4 @@ function ProductInCart(props) {
   )
 }
 
-export default ProductInCart
+export default ProductInCart;

@@ -3,8 +3,7 @@ import Header from './Components/Header/Header'
 import Hero from './Components/Hero/Hero'
 import Shop from './Components/Shop/Shop'
 import ProductList from './Components/Products/ProductList'
-import Footer from './Components/Footer/Footer'
-import SideCart from './Components/Cart/SideCart'
+import Footer from './Components/Footer/Footer';
 import Cart from './Components/Cart/Cart'
 import { ProductsContext } from './Components/Context/ProductsContext'
 import { Route, Routes } from 'react-router-dom';
@@ -13,19 +12,14 @@ function App() {
   const {viewCart} = useContext(ProductsContext);
   return (
     <div className=''>
+      <Header />
       <Routes>
         <Route path="/" element={
-          <div className='flex md:justify-start md:items-start'>
-            <div className='flex-1 w-[100%] md:max-w-[80%]'>
-              <Header />
-              <Hero />
-              <Shop />
-              <ProductList />
-              <Footer />
-            </div>
-            <div className='shadow-lg hidden md:block'>
-              {!viewCart && <SideCart />}
-            </div>
+          <div className=''>
+            <Hero />
+            <Shop />
+            <ProductList />
+            <Footer />
           </div>
         } />
         <Route path="/cart" element={<Cart />} />
